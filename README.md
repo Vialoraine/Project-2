@@ -1,4 +1,4 @@
-  # What's In Your Pocket, Happy Holi-Pays! - Stefany Sanchez, Christian Parks, James Vasquez, Nichole Uva, Loreina Salalila
+  # What's In Your Pocket, Happy Holi-Pays! - Stefany Sanchez, Christian Parks, James Vasquez, Nicole Uva, Loreina Salalila
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
   ## Description
   In this repository, . [Check out the deployed project over on Heroku](https://hw-note-taker.herokuapp.com/).
