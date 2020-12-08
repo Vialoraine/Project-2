@@ -28,7 +28,7 @@ app.post("/api/items", (req, res) => {
     return
   }
 
-  // Check if the item exists
+  // Check if the item exists in the items table
 
   // If the item exists, throw an error
 
