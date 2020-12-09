@@ -8,13 +8,202 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <title>Home</title>
+
+  <style>
+    /* customizable snowflake styling */
+    .snowflake {
+      color: #fff;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 5px #000;
+    }
+
+    @-webkit-keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @-webkit-keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
+
+      50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+      }
+    }
+
+    @keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        transform: translateX(0)
+      }
+
+      50% {
+        transform: translateX(80px)
+      }
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10%;
+      z-index: 9999;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+      -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+      -webkit-animation-duration: 10s, 3s;
+      -webkit-animation-timing-function: linear, ease-in-out;
+      -webkit-animation-iteration-count: infinite, infinite;
+      -webkit-animation-play-state: running, running;
+      animation-name: snowflakes-fall, snowflakes-shake;
+      animation-duration: 10s, 3s;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite, infinite;
+      animation-play-state: running, running
+    }
+
+    .snowflake:nth-of-type(0) {
+      left: 1%;
+      -webkit-animation-delay: 0s, 0s;
+      animation-delay: 0s, 0s
+    }
+
+    .snowflake:nth-of-type(1) {
+      left: 10%;
+      -webkit-animation-delay: 1s, 1s;
+      animation-delay: 1s, 1s
+    }
+
+    .snowflake:nth-of-type(2) {
+      left: 20%;
+      -webkit-animation-delay: 6s, .5s;
+      animation-delay: 6s, .5s
+    }
+
+    .snowflake:nth-of-type(3) {
+      left: 30%;
+      -webkit-animation-delay: 4s, 2s;
+      animation-delay: 4s, 2s
+    }
+
+    .snowflake:nth-of-type(4) {
+      left: 40%;
+      -webkit-animation-delay: 2s, 2s;
+      animation-delay: 2s, 2s
+    }
+
+    .snowflake:nth-of-type(5) {
+      left: 50%;
+      -webkit-animation-delay: 8s, 3s;
+      animation-delay: 8s, 3s
+    }
+
+    .snowflake:nth-of-type(6) {
+      left: 60%;
+      -webkit-animation-delay: 6s, 2s;
+      animation-delay: 6s, 2s
+    }
+
+    .snowflake:nth-of-type(7) {
+      left: 70%;
+      -webkit-animation-delay: 2.5s, 1s;
+      animation-delay: 2.5s, 1s
+    }
+
+    .snowflake:nth-of-type(8) {
+      left: 80%;
+      -webkit-animation-delay: 1s, 0s;
+      animation-delay: 1s, 0s
+    }
+
+    .snowflake:nth-of-type(9) {
+      left: 90%;
+      -webkit-animation-delay: 3s, 1.5s;
+      animation-delay: 3s, 1.5s
+    }
+
+    .snowflake:nth-of-type(10) {
+      left: 25%;
+      -webkit-animation-delay: 2s, 0s;
+      animation-delay: 2s, 0s
+    }
+
+    .snowflake:nth-of-type(11) {
+      left: 65%;
+      -webkit-animation-delay: 4s, 2.5s;
+      animation-delay: 4s, 2.5s
+    }
+  </style>
+
 </head>
 
 <body>
 
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+  </div>
 
   <nav class="navbar navbar-expand-lg my-nav">
-    <img id="wIYPLogo" src="https://cdn.discordapp.com/attachments/783457942455189570/786301168116170782/Transparent.png">
+    <img id="wIYPLogo"
+      src="https://cdn.discordapp.com/attachments/783457942455189570/786301168116170782/Transparent.png">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -57,7 +246,8 @@
         <br>
         <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-cash" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M15 4H1v8h14V4zM1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1z" />
+          <path fill-rule="evenodd"
+            d="M15 4H1v8h14V4zM1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1z" />
           <path
             d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
         </svg>
