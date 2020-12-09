@@ -1,0 +1,24 @@
+{
+  "name": "Project-2",
+  "version": "1.0.0",
+  "description": "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)\r   ## Description\r   In this repository, . [Check out the deployed project over on Heroku](https://hw-note-taker.herokuapp.com/).\r   ## Table of Contents\r   * [Usage](#usage)\r   * [License](#license)\r   * [Contact](#contact)\r   * [Screenshots](#screenshots)\r   ## Installation\r   ```npm init``` is used to install dependencies. is used to install dependencies.\r   ## Usage\r   Node.js must be installed onto your system prior to usage. Repo MUST include package.json with required dependencies.\r   ## License\r   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)\r   (https://opensource.org/licenses/MIT)\r   ## Contact\r   ## Screenshots\r   <img src=\"assets/Note-Taker.gif\">",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanysanz/Project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanysanz/Project-2/issues"
+  },
+  "homepage": "https://github.com/stefanysanz/Project-2#readme",
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  }
+}
