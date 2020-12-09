@@ -6,7 +6,16 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 const port = 8000;
 
+var mysql = require('mysql2');
 const { v4: uuidv4 } = require('uuid');
+
+// Create database connection
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "Enzo@2016",
+  database: "budget"
+});
 
 app.listen(port, () => {
   console.log("listening on http://localhost:" + port)
@@ -33,6 +42,13 @@ app.post("/api/items", (req, res) => {
   // If the item exists, throw an error
 
   // Create the record in the items table
+  const query = `INSERT INTO items (name, description, price) VALUES ("name", "desc", 1.22)`
+  db.query(query, (err, res) => {
+    if (err) {
+      throw err;
+    }
+    console.log("1 record inserted");
+  });
 
   // Handle success
   res.send({
@@ -64,6 +80,14 @@ app.get("/api/items", (req, res) => {
 // DeleteItem deletes a record in the items table
 app.delete("/api/items/:id", (req, res) => {
   console.log(`{"endpoint":"DELETE_ITEM","message":"request-received"}`);
+
+  // Validate id? (maybe just validate that it's a uuid?) <- optional
+
+  // Delete record from items table
+
+  // If an error occurred, respond with an error
+
+  // Handle success
   res.send({
     success: true,
   });
