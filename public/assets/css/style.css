@@ -89,6 +89,7 @@ section {
 
 .navbar {
   z-index: 10;
+  background-color: #555;
 }
 
 .my-nav .nav-link {
