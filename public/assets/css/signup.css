@@ -1,0 +1,9 @@
+body {
+  background: #00ECB9;
+}
+
+#signUpCard {
+  width: 18rem;
+  margin: auto;
+  padding: 70px 0;
+}
