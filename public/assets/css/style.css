@@ -7,7 +7,7 @@ body {
   font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, " sans-serif";
   font-size: 1rem;
   line-height: 1.5;
-  color: #333;
+  color: #fff;
   overflow-x: hidden;
 }
 
@@ -102,6 +102,7 @@ section {
 .navbar-toggler-icon {
   color: aliceblue;
 }
+
 #wIYPLogo {
   height: 50px;
   width: 200px;
