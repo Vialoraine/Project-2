@@ -1,0 +1,10 @@
+CREATE DATABASE budget;
+
+USE budget;
+
+CREATE TABLE items (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  description TEXT NOT NULL,
+  price FLOAT NOT NULL
+);
