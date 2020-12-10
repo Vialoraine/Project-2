@@ -1,4 +1,3 @@
-
 let ExpenseController = (() => {
   let total = 0, savings = 0, expenses = 0, investments = 0;
 

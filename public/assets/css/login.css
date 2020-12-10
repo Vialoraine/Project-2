@@ -1,0 +1,23 @@
+body {
+  background: #00ECB9;
+}
+
+#logInCard {
+  width: 18rem;
+  margin: auto;
+  padding: 70px 0;
+}
+
+.navbar {
+  z-index: 10;
+  background-color: #555;
+}
+
+#wIYPLogo {
+  height: 50px;
+  width: 200px;
+}
+
+.nav-link {
+  color: white;
+}
