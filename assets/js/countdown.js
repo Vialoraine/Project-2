@@ -38,6 +38,5 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date(Date.parse(new Date()) + 16 * 24 * 60 * 60 * 1000);
+const deadline = 'Dec 25, 2020 00:00:00'
 initializeClock('clockdiv', deadline);
-
