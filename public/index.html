@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/homepage.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -87,8 +87,7 @@
 
   <div class="video-header wrap">
     <div class="fullscreen-video-wrap">
-      <video
-        src="https://cdn.videvo.net/videvo_files/video/free/2017-12/small_watermarked/170105_2_4K_01_preview.webm"
+      <video src="https://cdn.videvo.net/videvo_files/video/free/2017-12/small_watermarked/170105_2_4K_01_preview.webm"
         autoplay loop muted></video>
     </div>
     <div class="header-overlay">
@@ -111,16 +110,29 @@
 
   <section class="section section-a">
     <div class="container">
+      <div id="countdown">
+        <h1>Countdown until Christmas Day.</h1>
+        <div id="days"></div>
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+      </div>
+  </section>
+
+
+  <section class="section section-a">
+    <div class="container">
       <h1>About Us</h1>
       <hr>
       <p>Welcome to What's In Your Pocket, Happy Holi-Pays!
-      
-      This is a simple list-building and budgeting web application that's ideal for planning and organizing all of your various holiday needs. With this
-      app you can create, edit, and delete lists for:
-      
-      <li>Buying presents for friends and family</li>
-      <li>Tracking your holiday shopping and spending</li>
-      <li>and many more...</li>
+
+        This is a simple list-building and budgeting web application that's ideal for planning and organizing all of
+        your various holiday needs. With this
+        app you can create, edit, and delete lists for:
+
+        <li>Buying presents for friends and family</li>
+        <li>Tracking your holiday shopping and spending</li>
+        <li>and many more...</li>
 
     </div>
   </section>
@@ -132,30 +144,36 @@
       <img src="./assets/images/Carlo.png" alt="Carlo" style="width:200px">
       <p><span>Quinton</span></p>
       <p><span>Teaching Assistant</span></p>
-      <p>There's something about Christmas that's just magical. Money just seems to disappear into thin air. Thank you What's In Your Pocket, by using your app I realize, it's not disappearing, it's getting deposited into the pockets of the Target CEO.</p>
+      <p>There's something about Christmas that's just magical. Money just seems to disappear into thin air. Thank you
+        What's In Your Pocket, by using your app I realize, it's not disappearing, it's getting deposited into the
+        pockets of the Target CEO.</p>
     </div>
-  
+
     <div class="container">
       <img src="./assets/images/Quinton.png" alt="Quinton" style="width:200px">
       <p><span>Quinton</span></p>
       <p><span>Teacher</span></p>
-      <p>I think as you grow older your Christmas list gets shorter, because all of the sudden all you really want is free clothes and a copy of Cyberpunk. Thank you What's In Your Pocket for providing an app that keeps all my other Christmas lists in order.</p>
+      <p>I think as you grow older your Christmas list gets shorter, because all of the sudden all you really want is
+        free clothes and a copy of Cyberpunk. Thank you What's In Your Pocket for providing an app that keeps all my
+        other Christmas lists in order.</p>
     </div>
-  
+
     <div class="container">
       <img src="./assets/images/Calum.png" alt="Calum" style="width:200px">
       <p><span>Calum</span></p>
       <p><span>Former Teaching Assistant... What Exactly Does He Even Do Now</span></p>
-      <p>Christmas is not an emergency, it doesn't sneak up on you. Lack of planning, when you have an application like What's In Your Pocket,is not an excuse to use credit cards!... especially when you logged all your spending money for the holidays.</p>
+      <p>Christmas is not an emergency, it doesn't sneak up on you. Lack of planning, when you have an application like
+        What's In Your Pocket,is not an excuse to use credit cards!... especially when you logged all your spending
+        money for the holidays.</p>
     </div>
-  
+
     </div>
     <div class="container">
-  
+
   </section>
 
 
-
+  <script src="./assets/js/index.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
