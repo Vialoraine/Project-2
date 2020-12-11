@@ -21,7 +21,7 @@ app.listen(port, () => {
   console.log("listening on http://localhost:" + port)
 })
 
-// CreateItem creates a new record in the items table
+// CreateItem 
 app.post("/api/items", (req, res) => {
   console.log(`{"endpoint":"CREATE_ITEM","message":"request-received"}`)
 
@@ -71,9 +71,12 @@ app.post("/api/items", (req, res) => {
         return
       }
 
+      console.log(dbRes)
+
       // Handle success
       res.send({
         item: {
+          id: dbRes.insertId,
           name: req.body.name,
           description: req.body.description,
           price: req.body.price
@@ -98,7 +101,7 @@ const validateCreateItemRequest = (body) => {
   }
 }
 
-// ListItems lists records in the items table
+// ListItems
 app.get("/api/items", (req, res) => {
   console.log(`{"endpoint":"LIST_ITEMS","message":"request-received"}`)
   
@@ -121,7 +124,7 @@ app.get("/api/items", (req, res) => {
   })
 })
 
-// DeleteItem deletes a record in the items table
+// DeleteItem 
 app.delete("/api/items/:id", (req, res) => {
   console.log(`{"endpoint":"DELETE_ITEM","message":"request-received"}`)
 
@@ -145,4 +148,16 @@ app.delete("/api/items/:id", (req, res) => {
     })
   })
 
+})
+
+// Login
+app.get("/api/login", (req, res) => {
+})
+
+// CreateUser
+app.post("/api/users", (req, res) => {
+})
+
+// UpdateUser
+app.put("/api/users", (req, res) => {
 })

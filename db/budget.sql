@@ -1,4 +1,4 @@
-CREATE DATABASE budget;
+CREATE DATABASE budget IF NOT EXISTS;
 
 USE budget;
 

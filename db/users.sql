@@ -1,0 +1,12 @@
+CREATE DATABASE budget IF NOT EXISTS;
+
+USE budget;
+
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(250) NOT NULL,
+  password_hash VARCHAR(250) NOT NULL,
+  first_name VARCHAR(250),
+  last_name VARCHAR(250),
+  budget FLOAT 
+);
