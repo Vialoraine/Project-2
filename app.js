@@ -10,9 +10,10 @@ const routes = require("./controllers/routes.js")
 const models = require("./models")
 models.sequelize.sync()
 const Items = models.items
+const Users = models.users
 
 app.listen(port, () => {
   console.log("listening on http://localhost:" + port)
 })
 
-routes.create(app, Items)
+routes.create(app, Items, Users)

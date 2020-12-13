@@ -1,6 +1,7 @@
 const itemsHandlers = require("./items_handlers.js")
+const usersHandlers = require("./users_handlers.js")
 
-exports.create = (app, Items) => {
+exports.create = (app, Items, Users) => {
 
   // CreateItem 
   app.post("/api/items", (req, res) => {
@@ -19,10 +20,12 @@ exports.create = (app, Items) => {
 
   // Login
   app.get("/api/login", (req, res) => {
+    usersHandlers.login(req, res, Users)
   })
 
   // CreateUser
   app.post("/api/users", (req, res) => {
+    usersHandlers.createUser(req, res, Users)
   })
 
   // UpdateUser

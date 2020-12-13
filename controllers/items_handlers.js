@@ -54,7 +54,7 @@ exports.createItem = async (req, res, Items) => {
     return
   }
 
-  // Create an item
+  // Create item
   let createRes;
   try {
 
@@ -72,6 +72,7 @@ exports.createItem = async (req, res, Items) => {
       status: "Internal Server Error",
     })
 
+    return
   }
 
   // Handle success
