@@ -1,5 +1,13 @@
-const List = require('./ToDo_List.js')
-// const ToDoList = require('./ToDo_list.js')
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('budget', 'root', 'root', {
+  host: "localhost",
+  dialect: "mysql",
+});
 
+const models = {
+    Sequelize: Sequelize,
+    sequelize: sequelize,
+    items: require("./items.js")(sequelize, Sequelize),
+}
 
-module.exports = { List }
+module.exports = models;
