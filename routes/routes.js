@@ -13,7 +13,7 @@ const { format } = require('path')
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Dreyfany@2014",
+  password: "root",
   database: "budget"
 })
 
