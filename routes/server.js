@@ -8,12 +8,13 @@
 
 // var mysql = require('mysql2');
 // const { v4: uuidv4 } = require('uuid');
+// const { format } = require('path');
 
 // // Create database connection
 // const db = mysql.createConnection({
 //   host: "localhost",
 //   user: "root",
-//   password: "Enzo@2016",
+//   password: "Dreyfany@2014",
 //   database: "budget"
 // });
 
@@ -38,22 +39,53 @@
 //   }
 
 //   // Check if the item exists in the items table
+//   let dbErr = false
+//   let query = `SELECT id, name, description, price FROM items WHERE name="${req.body.name}"`
+//   db.query(query, (err, dbRes) => {
+//     if (err) {
+//       console.log(err)
+//       dbErr = true
+//       res.send({
+//         code: 500,
+//         status: "Internal Server Error"
+//       })
+//       return
+//     }
 
-//   // If the item exists, throw an error
+//     if (dbRes.length > 0) {
+//       console.log("item already exists")
+//       dbErr = true
+//       res.send({
+//         code: 409,
+//         status: "Conflict",
+//         message: "item already exists"
+//       })
+//       return
+//     }
 
-  // // Create the record in the items table
-  // const query = `INSERT INTO items (name, description, price) VALUES ("name", "desc", 1.22)`
-  // db.query(query, (err, res) => {
-  //   if (err) {
-  //     throw err;
-  //   }
-  //   console.log("1 record inserted");
-  // });
+//     // Create the record in the items table
+//     query = `INSERT INTO items (name, description, price) VALUES ("${req.body.name}", "${req.body.description}", ${req.body.price})`
+//     db.query(query, (err, dbRes) => {
+//       if (err) {
+//         console.log(err);
+//         throw err;
+//       }
+//     });
 
-//   // Handle success
-//   res.send({
-//     success: true,
+//     // Handle success
+//     res.send({
+//       code: 200,
+//       status: "Ok",
+//       message: "item created",
+//       item: {
+//         name: req.body.name,
+//         description: req.body.description,
+//         price: req.body.price
+//       }
+//     })
+
 //   })
+  
 // })
 
 // const validateCreateItemRequest = (body) => {
@@ -77,18 +109,18 @@
 //   });
 // })
 
-// DeleteItem deletes a record in the items table
-// app.delete("/api/items/:id", (req, res) => {
-//   console.log(`{"endpoint":"DELETE_ITEM","message":"request-received"}`);
+// // DeleteItem deletes a record in the items table
+// // app.delete("/api/items/:id", (req, res) => {
+// //   console.log(`{"endpoint":"DELETE_ITEM","message":"request-received"}`);
 
-  // Validate id? (maybe just validate that it's a uuid?) <- optional
+//   // Validate id? (maybe just validate that it's a uuid?) <- optional
 
-  // Delete record from items table
+//   // Delete record from items table
 
-  // If an error occurred, respond with an error
+//   // If an error occurred, respond with an error
 
-  // Handle success
-//   res.send({
-//     success: true,
-//   });
-// })
+//   // Handle success
+// //   res.send({
+// //     success: true,
+// //   });
+// // })
