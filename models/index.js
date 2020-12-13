@@ -8,6 +8,7 @@ const models = {
     Sequelize: Sequelize,
     sequelize: sequelize,
     items: require("./items.js")(sequelize, Sequelize),
+    users: require("./users.js")(sequelize, Sequelize),
 }
 
 module.exports = models;

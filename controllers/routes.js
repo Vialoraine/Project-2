@@ -1,45 +1,32 @@
-const path = require('path')
-const express = require("express")
-const app = express()
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
-const port = 8000
+const itemsHandlers = require("./items_handlers.js")
 
-var mysql = require('mysql2')
+exports.create = (app, Items) => {
 
-const models = require("../models")
-models.sequelize.sync()
-const Items = models.items
-const handlers = require("./handlers.js")
+  // CreateItem 
+  app.post("/api/items", (req, res) => {
+    itemsHandlers.createItem(req, res, Items)
+  })
 
-app.listen(port, () => {
-  console.log("listening on http://localhost:" + port)
-})
+  // ListItems
+  app.get("/api/items", (req, res) => {
+    itemsHandlers.listItems(req, res, Items)
+  })
 
-// CreateItem 
-app.post("/api/items", (req, res) => {
-  handlers.createItem(req, res, Items)
-})
+  // DeleteItem 
+  app.delete("/api/items/:id", (req, res) => {
+    itemsHandlers.deleteItem(req, res, Items)
+  })
 
-// ListItems
-app.get("/api/items", (req, res) => {
-  handlers.listItems(req, res, Items)
-})
+  // Login
+  app.get("/api/login", (req, res) => {
+  })
 
-// DeleteItem 
-app.delete("/api/items/:id", (req, res) => {
-  handlers.deleteItem(req, res, Items)
-})
+  // CreateUser
+  app.post("/api/users", (req, res) => {
+  })
 
-// Login
-app.get("/api/login", (req, res) => {
-})
+  // UpdateUser
+  app.put("/api/users", (req, res) => {
+  })
 
-// CreateUser
-app.post("/api/users", (req, res) => {
-})
-
-// UpdateUser
-app.put("/api/users", (req, res) => {
-})
+}
