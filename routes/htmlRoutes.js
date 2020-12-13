@@ -10,7 +10,7 @@ router.get('/users', (req, res) => {
   res.sendFile(join(__dirname, '../public/login.html'))
 })
 
-router.get('/budget', (req, res) => {
+router.get('/budgets', (req, res) => {
   res.sendFile(join(__dirname, '../public/budget.html'))
 })
 
